@@ -15,6 +15,11 @@ class CalcTest {
     }
 
     @Test
+    void add2() {
+        assertEquals(-3, calc.add(-1, -2));
+    }
+
+    @Test
     void subtract() {
         assertEquals(-1, calc.subtract(1, 2));
     }
