@@ -34,3 +34,10 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+task printEnv {
+    doLast {
+        println "SECRET_KEY: " + System.getenv("SECRET_KEY")
+        println "STATIC_KEY: " + System.getenv("STATIC_KEY")
+    }
+}
