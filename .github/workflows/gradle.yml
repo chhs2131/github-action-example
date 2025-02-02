@@ -33,10 +33,13 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
-    - name: Build with Gradle Wrapper
+    - name: PRINT ENV!!!!
       env:
         SECRET_KEY: ${{ secrets.THIS_IS_SECRET_KEY }}
         STATIC_KEY: GOODBYE
+      run: ./gradlew printEnv
+
+    - name: Build with Gradle Wrapper
       run: ./gradlew build
 
   dependency-submission:
