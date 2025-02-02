@@ -30,4 +30,5 @@ class CalcTest {
         assertEquals(1, calc.add(1, 2));
     }
 
+
 }
